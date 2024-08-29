@@ -1,0 +1,110 @@
+---
+title: "Lab 2"
+author: "Your_name_here"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+# Problem Set: Introduction & Instructions
+
+# Problem 1: Logical Tests on Vectors
+
+1a. Create two vectors, one with values of `1,2,3` and the other with values of `1,2,4`
+```{r}
+# Create your first vector here
+
+
+# Create your second vector here
+
+
+```
+
+1b-e. Run each specified type of logical test between your vectors
+```{r}
+# 1b. Equality
+
+
+```
+```{r}
+# 1c. Inequality
+
+
+```
+```{r}
+# 1d. Less than or equal to
+
+
+```
+```{r}
+# 1e. Greater than or equal to
+
+
+```
+
+# Problem 2: Functions
+
+2a-d. Describe what the functions are doing
+```{r, eval=FALSE}
+# 2a.
+vec <- c(1,5,7,2,4, NA)
+mean(vec)
+```
+Answer 2a: 
+
+
+```{r, eval=FALSE}
+# 2b
+mean(vec, na.rm=F)
+```
+Answer 2b:
+
+
+```{r, eval=FALSE}
+# 2c
+add <- function(x,y,z){
+  return(x+y+7)
+}
+```
+Answer 2c:
+
+
+```{r, eval=FALSE}
+# 2d.
+some_function <- function(x,y,z,m){
+  c <- mean(c(x,y,z))
+  return(c*m)
+}
+```
+Answer 2d:
+
+
+
+# Problem 3: More Functions
+
+Create a function that satisfies the requirement(s)
+
+3a. Create a function that takes in two numbers to add them and returns the sum
+```{r}
+
+```
+
+3b. Create a function that takes in a number, tests if that number is bigger than 40, and returns the True/False result
+```{r}
+
+```
+
+3c. Create a function that takes in a matrix, adds 8 to each element, and returns the new matrix.
+```{r}
+
+```
+
+3d. Create a matrix with at least 3 rows and 2 columns. Then, use the function you created in 3c and display the result
+```{r}
+# Define your matrix here
+
+
+# Call your 3c function here
+
+
+```
+

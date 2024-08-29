@@ -1,0 +1,214 @@
+---
+title: "Lab 1"
+author: "Your_name_here"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+# Problem Set: Introduction & Instructions
+
+
+
+# Problem 0: Github
+
+We need to know your name and github username for our records. If you haven't yet put your name in the YAML header "author" option at the top of the document, please do so. You will need to write your name there for future R Markdown assignments. Below, please make sure your let us know what your Github username is for our future records. 
+
+Your github username:
+
+# Problem 1: R Arithmetic
+
+Code a few arithmetic equations to practice for problems 1a-1d. They can be simple equations
+
+1a. Addition
+```{r addition}
+# Addition equation
+
+```
+
+1b. Subtraction
+```{r subtraction}
+# Subtraction equation
+
+```
+
+1c. Multiplication
+```{r multiplication}
+# Multiplication equation
+
+```
+
+1d. Division
+```{r division}
+# Division equation
+
+```
+
+# Problem 2: More R Arithmatic
+
+Code the arithmetic problems requested for 2a-2d
+
+2a. Put parentheses in the equation so the output is 0
+```{r parentheses}
+# Add parentheses
+3 + 6 * 0
+```
+
+2b. Write an exponent here
+```{r exponents}
+# An exponent
+
+```
+
+2c. Find the square root of 75
+```{r}
+# Square root of 75
+75
+```
+
+2d. Find the cube root of 75
+```{r}
+# Cube root of 75
+75
+```
+
+# Problem 3: R variables
+
+3a&b. Define 2 variables. Name the placeholder however you wish, give the first one (3a.) a value of 3 and the second one (3b.) a value of 8
+```{r code_variable_define}
+
+# 3a. Define your first variable here. Give it a value of 3
+ <- 3
+
+# 3b. Define your second variable here. Give it a value of 8
+ <- 8
+
+```
+
+3c. Access and your first variable. Output should be 3
+```{r code_variable_access1}
+
+
+```
+
+3d, Access your second variable. Output should be 8
+```{r code_variable_access2}
+
+
+```
+
+
+# Problem 4: Vectors
+
+4a. set variable `y` to represent vector `c(2,4,6,NA)` 
+```{r code_mean_sety}
+# Define y here
+y <- 
+
+```
+
+4b. find the mean of `y` KEEPING NA value(s)
+```{r code_mean_NA_True}
+y
+```
+
+4c. find the mean of `y` REMOVING NA value(s)
+
+```{r code_mean_remove}
+y
+```
+
+# Problem 5: Factors
+
+5a. Display variable case_status in its numeric format (See slide "Factors are numeric vectors")
+```{r}
+### Setup DO NOT TOUCH ###
+case_status <- factor(
+  c('Disease','Disease','Disease',
+    'Control','Control','Control'
+  )
+)
+
+# 5a. Format case_status into numeric form
+
+
+```
+
+5b. Create your own variable as a factor with at least 3 different levels
+```{r}
+
+# Create your own variable
+
+
+# Display your variable
+
+
+```
+
+# Problem 6: Matrices
+
+6a. Print our the dimensions of matrixA
+```{r}
+### Setup DO NOT TOUCH ###
+matrixA <- matrix(c(1,2,3,4,5,6),
+       nrow = 2, ncol = 3, byrow=1
+      )
+
+# 6a. print out the dimensions of matrixA
+
+
+```
+
+6b. Transpose matrixA
+```{r}
+
+```
+
+6c. Create your own matrix. 
+```{r}
+
+```
+
+6d-e. Display the dimensions of your matrix (6d) and then transpose your matrix (6e)
+```{r}
+# 6d. Display your matrix's dimensions
+
+
+# 6e. Transpose your matrix
+
+
+```
+
+6f-g. Name the columns (6f) and rows (6g) of your created matrix
+```{r}
+# 6f. Name the columns of your matrix
+
+
+# 6g. Name the rows of your matrix
+
+
+# Display your matrix
+
+
+```
+
+# Problem 7: List Practice
+
+7a. Create a list
+```{r}
+
+```
+
+7b. Create a list where the elements are indexed by name
+```{r}
+
+```
+
+7c. Access an element from the list you created in 7b by name
+```{r}
+
+```
+
+
+
+
+
