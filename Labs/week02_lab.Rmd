@@ -1,0 +1,218 @@
+---
+title: "Lab 3"
+author: "Your_name_here"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+# Problem Set 3
+
+# Problem 1: Introductory Debugging
+
+Debug the codeblocks for 1a-e below so they run correctly
+
+1a. Variable var should be 'banana'
+```{r}
+var <- "banana
+
+var
+```
+
+1b. Variable var should equal 7
+```{r}
+var <<- 7
+
+var
+```
+
+1c. Variable var should be 'apple'
+```{r}
+var <- apple
+
+var
+```
+
+1d. Function add_1() should add 1 to the input value
+```{r}
+add_1 <- function(x{
+  return(x+1)
+}
+
+add_1(5)
+```
+
+1e. Code should print out 'I love bioinformatics'
+```{r}
+primt("I love bioinformatics")
+```
+
+# Problem 2: Checking function functionality
+
+These functions do not do what they are supposed to. Test them and fix the ones that do not work properly. If you do not know what a function does, you may look it up via internet search, by typing in '?function_name' into the console, or figuring it out a different way. 
+
+2a. Function find_means() is intended to take in a dataframe and find the mean of each numeric column
+```{r}
+library(tidyverse)
+find_means <- function(x){
+  select_if(x, is.numeric) %>%
+    colMeans(.)
+}
+```
+```{r}
+# 2a tests
+find_means(iris)
+# Expected output: 
+# Sepal.Length  Sepal.Width Petal.Length  Petal.Width 
+#     5.843333     3.057333     3.758000     1.199333
+
+find_means(airquality)
+# Expected output:
+#      Ozone    Solar.R       Wind       Temp      Month        Day 
+#  42.129310 185.931507   9.957516  77.882353   6.993464  15.803922
+```
+
+2b. Function multiply_if() will multiply x by y if and only if both numbers are greater than 7, else the function prints out "Input does not meet requirements"
+```{r}
+multiply_if <- function(x,y){
+  if(x<7 | y<7){
+    print("Input does not meet requirements")
+  }else{return(x*y)}
+}
+```
+```{r}
+# Write your own tests here
+multiply_if()
+
+
+
+```
+
+
+# Problem 3: Unit Testing
+
+Write unit tests to test the functions. Please test at least 3 different aspects of the function. Not all functions work properly
+```{r}
+# Load packages for problem 3
+library(testthat)
+```
+
+
+3a. Function add() should take in two numbers and add them together
+```{r}
+add <- function(x,y){
+  return(x+y)
+}
+```
+```{r}
+## Write unit tests for add() here ##
+
+
+
+```
+
+
+
+3b.Function multiply_IF() will multiply x by y if and only if both numbers are greater than 7, else the function prints out "Input does not meet requirements"
+```{r}
+# Load packages for problem 3
+library(testthat)
+
+### function DO NOT TOUCH this one###
+multiply_IF <- function(x,y){
+  if(x<7 | y<7){
+    print("Input does not meet requirements")
+  }else{return(x*y)}
+}
+```
+```{r}
+## Write unit tests for multiply_IF() here ##
+
+
+
+```
+
+
+# Problem 4: Importing data via Tidyverse
+
+4a. Load tidyverse here.
+```{r}
+
+```
+
+4b. Load the included csv, "week02_data.csv" here. Name the variable something appropriate.
+```{r}
+
+```
+
+4c. Display your tibble, including the column names
+```{r}
+
+```
+
+4d. Access just the `density` column of your tibble and print it out
+```{r}
+
+```
+
+# Problem 5: Basic Tibble Manipulation
+
+5a. For problem 5, use the tibble you loaded from `week02_data.csv` If you need to reload it, do so here
+```{r}
+
+```
+
+5b. Rename the "ID" column to "sample_ID"
+```{r}
+
+```
+
+5c. Dr. Orofino wants to see only the results from sample_ID 6 accross all runs. Filter the tibble so that you only print out sample_ID 6's results across all 11 runs
+```{r}
+
+```
+
+5d. Now filter the tibble so that you only print out the results from Run 7 across all 16 samples
+```{r}
+
+```
+
+5e. Reorder the tibble columns so that sample_ID is now the leftmost column. The order from left to right should be `sample_ID`, `Run`, `conc`, and `density`. You may filter the rows as you wish, as long as at least 1 row is displayed.
+```{r}
+
+```
+
+5f. The inconsistent capitalization of the column names is now bugging Dr. Orofino. Once again, rename the columns so that the capitalization pattern is consistent across a 4 columns. Keep the order specified in 5e with the sample ID column on the left.
+```{r}
+
+```
+
+5g. Use pivot_wider on the full tibble you imported so that the each run number has its own column. Output column should be 16 rows (1 row per Sample ID) by 13 columns (12 if you drop column 'conc')
+```{r}
+
+```
+
+
+# Problem 6: Piping it together
+
+Pipe multiple commands together. If you are more familiar with R you may combine multiple steps if you know how. 
+
+6a. Pipe the following commands together:
+  1. load the tibble from `week02_data` (4a/5a)
+  2. Rename 'ID' to 'sample_ID' (5b)
+  3. Rename column names so that the capitalization pattern is consistent across all columns (5f)
+  4. Reorder the tibble columns so that the column containing sample ids is on the left (5e)
+  5. Filter the rows so that only rows from runs 7 are displayed (5d)
+  6. Display the resulting tibble
+```{r}
+
+```
+
+6b. Pipe the following commands together to create a new tibble that displays the average sample density accross all runs:
+  1. load the tibble from `week02_data` (4a/5a)
+  2. Rename 'ID' to something more descriptive (5b)
+  3. Group the data by the newly-labeled sample id column
+  4. Summarize() the data so that a new column is created from the means of the old density column.
+```{r}
+
+```
+  
