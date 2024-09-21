@@ -1,0 +1,79 @@
+---
+title: "Week 3 Lab"
+author: "Your_name_here"
+output: html_document
+date: "`r Sys.Date()`"
+---
+
+# Problem 1: Installing Packages
+
+1a. Write the code to install fake package `bf591`. Make sure that this code DOES NOT RUN as you will get errors when trying to knit
+```{r}
+
+```
+
+1b. Write the code to install `biomaRt` via bioconductor. You may want to look this one up outside of the class slides. You probably won't want this code to run if you are knitting this document, so plan appropriately.
+```{r}
+
+```
+
+# Problem 2: Biomart
+
+2a. Load biomaRt. You can also load any other libraries you want to use here or at any other time.
+```{r}
+
+```
+
+2b. Retrieve dataset "hsapiens_gene_ensembl" with the biomaRt::useEnsembl() function as shown in the lecture slides
+```{r}
+
+```
+
+2c. Display the retrieved ensembl dataset as a tibble
+```{r}
+
+```
+
+2d. Create and display a tibble with ensembl gene ID, HGNC gene symbol, and gene description using biomaRt::getBM()
+```{r}
+
+```
+
+2e. Find the Ensembl gene IDs for  the following genes: `CHD1`, ZSWIM4`, `MALL`, and `SDSL`
+```{r}
+
+```
+
+
+# Problem 3: GGPlot
+
+3a. Use this opportunity to explore the `iris` dataset that is built in R. You may access it by calling it.
+```{r}
+
+```
+
+3b. Using the iris dataset, pick two of the columns to create a basic scatterplot.
+```{r}
+
+```
+
+3c. Using the iris dataset, create a scatterplot that colors the points using the categorical column `Species`. Use two of the other columns for the x and y axis
+```{r}
+
+```
+
+3d. Using the iris dataset, create a violin plot using `Species` as the x-axis variable.
+```{r}
+
+```
+
+3e. Make 3d into a boxplot instead
+```{r}
+
+```
+
+3f. Create two different ggplot graphs and print them side-by-side.
+```{r}
+
+```
+
